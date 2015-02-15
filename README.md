@@ -15,7 +15,9 @@ CSS
   
 Templates
   -splash/layout pages
-  -campaign pages
+  -base template 	-- Ian 
+  -campaign pages	
+  -list of candidates	-- Ian
   
 Other pages
   -list of all campaigns page
