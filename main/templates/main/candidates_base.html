@@ -37,14 +37,14 @@
   </nav>
   <!-- main content -->
   <div class="container">
-   <h2>Vote For  </h2>
+   <h2>Vote For {{c.name}} </h2>
    <br/>
    <div class="row">
       <div class="col-md-4">
-        <img src="{{ image.image.url }}" height="500" width="300">
+        <img src="{{ c.picture }}" height="500" width="300">
       </div>
       <div class="col-md-8">
-        <p> blah</p>  
+        <p> {{c.description}}</p>  
       </div> 
    </div>
    <br/>
