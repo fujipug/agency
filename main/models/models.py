@@ -10,3 +10,13 @@ class PostForm(models.Model):
     #When making changes to class PostForm
     #!.) python manage.py makemigrations making
 	#2.) python manage.py migrate
+
+class Candidate(models.Model):
+    name=models.TextField()
+    party=models.CharField(max_length=10)
+    description=models.TextField(default="Description missing.")
+    picture=models.TextField()
+    def __unicode__(self):
+        return self.name
+
+    #Still have to add to DB 
