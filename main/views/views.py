@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.template.loader import get_template
 from django.http import HttpResponse
 from main.models import Candidate
+from django.template import Context
 
 
 def post_form_upload(request):
@@ -29,22 +30,13 @@ def post_form_upload(request):
     #!.) python manage.py makemigrations making
     #2.) python manage.py migrate
 
-def Candidate_1(request):
-    return Candidate_helper(1)
-
-def Candidate_2(request):
-    return Candidate_helper(2)
-
-def Candidate_3(request):
-    return Candidate_helper(3)
-
-def Candidate_4(request):
-    return Candidate_helper(4)
-
-def Candidate_helper(id_num):
-    Candidate = Candidate.objects.get(id=id_num)
-    template = get_template('candidates.html')
-    html = template.render(Context({'c' : Candidate}))
+def Candidates(request, candidate_id):
+    candidate = Candidate.objects.get(id=candidate_id)
+    template = get_template('main/candidates_base.html')
+    html = template.render(Context({'c' : candidate}))
     return HttpResponse(html)
+
+
+
 
    #Still have to add to DB 
