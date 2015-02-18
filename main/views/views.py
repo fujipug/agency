@@ -20,3 +20,8 @@ def post_form_upload(request):
  
     return render(request, 'main/post_form_upload.html', {
         'form': form, })
+
+
+    #When making changes to class PostForm
+    #!.) python manage.py makemigrations making
+    #2.) python manage.py migrate
