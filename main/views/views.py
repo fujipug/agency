@@ -33,13 +33,13 @@ def Candidate_1(request):
     return Candidate_helper(1)
 
 def Candidate_2(request):
-return Candidate_helper(2)
+    return Candidate_helper(2)
 
 def Candidate_3(request):
-return Candidate_helper(3)
+    return Candidate_helper(3)
 
 def Candidate_4(request):
-return Candidate_helper(4)
+    return Candidate_helper(4)
 
 def Candidate_helper(id_num):
     Candidate = Candidate.objects.get(id=id_num)
