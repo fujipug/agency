@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'^$', 'main.views.home.index', name='home'),
     url(r'^candidates/', 'main.views.candidates.index', name='candidates'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^post_form_upload', 'main.views.post_form_upload.post_form_upload', name='post_form_upload'),
+    url(r'^post_form_upload', 'main.views.views.post_form_upload', name='post_form_upload'),
 )

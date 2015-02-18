@@ -37,11 +37,43 @@
   </nav>
   <!-- main content -->
   <div class="container">
-   {% block content %}
-   {% block header1 %}Vote For  {% endblock %}
-   <img src="{{ image.image.url }}" height="500" width="300">
-   <p> </p>
-   {% endblock %}
+   <h2>Vote For  </h2>
+   <br/>
+   <div class="row">
+      <div class="col-md-4">
+        <img src="{{ image.image.url }}" height="500" width="300">
+      </div>
+      <div class="col-md-8">
+        <p> blah</p>  
+      </div> 
+   </div>
+   <br/>
+   <br/>
+   <h1>Free Stuff</h1>
+   <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'main/tshirt.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>T-Shirt</h2>
+
+          <p><a class="btn btn-default" href="#" role="button">Get Gift &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'main/sticker.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Bumper Sticker</h2>
+
+          <p><a class="btn btn-default" href="#" role="button">Get Gift &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static 'main/keychain.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Keychain</h2>
+
+          <p><a class="btn btn-default" href="#" role="button">get Gift &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+   </div><!-- /.row -->    
+  
  </div>
 
  <!-- footer -->
