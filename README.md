@@ -6,7 +6,7 @@ Database Construction
   -funtion to add to DB from page
 
 Form Creation
-  -create forms
+  -create forms --Lane
   -implement into site
   
 CSS 
@@ -14,11 +14,11 @@ CSS
   -header/footer
   
 Templates
-  -splash/layout pages
+  -splash/layout pages --Lane: started it
   -base template 	-- Ian 
-  -campaign pages	
+  -campaign pages	--Lane; started it
   -list of candidates	-- Ian
   
 Other pages
   -list of all campaigns page
-  -sign up/form page
+  -sign up/form page --Lane
