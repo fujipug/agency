@@ -25,5 +25,3 @@ class Candidate(models.Model):
     picture=models.TextField(default="")
     def __unicode__(self):
         return self.name
-
-    #Still have to add to DB

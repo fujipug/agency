@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrapform',
-    'localflavor'
+    'localflavor,
+    'django-localflavor'
 ]
 
 import local_apps
