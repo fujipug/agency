@@ -1,15 +1,14 @@
 from django.db import models
-from us_states import STATE_CHOICES
-from localflavor.us.models import USStateField
-
+from localflavor.us.us_states import STATE_CHOICES
+from localflavor.us.models import USStateField, USZipCodeField
 
 class FreeStuff(models.Model):
     FREE_CHOICES=[('T-shirt','T-shirt'),('Sticker','Sticker'),('Keychain','Keychain')]
     name = models.CharField(max_length=256, default="")
     email = models.CharField(max_length=256, default="")
     address = models.CharField(max_length=256, default="")
-    state = models.USStateField(attrs=None)
-    zipcode = models.CharField(max_length=6, default="")
+    state = USStateField(choices = STATE_CHOICES)
+    zipcode = USZipCodeField(max_length=None)
     gift = models.CharField(max_length=10, choices=FREE_CHOICES, default='T-shirt')
     def __unicode__(self):
         return self.name
@@ -25,3 +24,4 @@ class Candidate(models.Model):
     picture=models.TextField(default="")
     def __unicode__(self):
         return self.name
+

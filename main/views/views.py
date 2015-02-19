@@ -16,11 +16,15 @@ def free_stuff_form(request):
  
         # If data is valid, proceeds to create a new post and redirect the user
         if form.is_valid():
-            content = form.cleaned_data['content']
-            created_at = form.cleaned_data['created_at']
-            #post = PostForm.objects.create(content=content, created_at=created_at)
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            address = form.cleaned_data['address']
+            state = form.cleaned_data['state']
+            zipcode = form.cleaned_data['zipcode']
+            gift = form.cleaned_data['gift']
+            #post = FreeStuff.objects.create(name=name, email=email, address=address, state=state, zipcode=zipcode, gift=gift)
             form.save()
-            return HttpResponseRedirect(reverse('post_detail', kwargs={'post_id': post.id}))
+            return HttpResponseRedirect('/confirmation/')#HttpResponseRedirect(reverse('free_stuff_form')), kwargs={'post_id': post.id}))
  
     return render(request, 'main/free_stuff_form.html', {
         'form': form, })

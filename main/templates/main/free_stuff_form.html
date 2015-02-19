@@ -11,7 +11,7 @@
 
 <p>In order to receive your free gift from The Agency, we will need some information to better accomidate the shipping process.</p>
 <br/>
-<form action= 'confirmation.html' role="form" method='post'>{% csrf_token %}
+<form action= '/free_stuff_form/' role="form" method='post'>{% csrf_token %}
 	{{ form|bootstrap }}
 	<input type='submit' value='Submit' />
 </form>
