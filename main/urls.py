@@ -8,7 +8,7 @@ urlpatterns = patterns('',
 
     url(r'^$', 'main.views.home.index', name='home'),
     url(r'^about/', 'main.views.home.about', name='about'),
-    url(r'^candidates/', 'main.views.candidates.index', name='candidates'),
+    url(r'^candidates/$', 'main.views.candidates.index', name='candidates'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^free_stuff_form/', 'main.views.views.free_stuff_form', name='free_stuff_form'),
     url(r'^candidates/(?P<candidate_id>\d+)/$','main.views.views.Candidates'),
