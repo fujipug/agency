@@ -10,5 +10,5 @@ urlpatterns = patterns('',
     url(r'^candidates/', 'main.views.candidates.index', name='candidates'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^post_form_upload', 'main.views.views.post_form_upload', name='post_form_upload'),
-    url(r'^candidates/(?P<candidate_id>\d+)/$','main.views.views.Candidates'),
+    url(r'^aboutcandidates/(?P<candidate_id>\d+)/$','main.views.views.Candidates'),
 )
