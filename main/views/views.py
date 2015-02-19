@@ -31,6 +31,8 @@ def free_stuff_form(request):
     #2.) python manage.py migrate
 def Candidates(request, candidate_id):
     candidate = Candidate.objects.get(id=candidate_id)
-    template = get_template('main/candidates_base.html')
-    html = template.render(Context({'c' : candidate}))
-    return HttpResponse(html)
+    context = {'c': candidate}
+    return render(request, 'main/candidates_base.html', context)
+   # template = get_template('main/candidates_base.html')
+   # html = template.render(Context({'c' : candidate}))
+   # return HttpResponse(html)
