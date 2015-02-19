@@ -3,16 +3,15 @@
 {% block title %}
 	
 {% endblock %}
-{% block header1 %}
-	
-{% endblock %}
-
-{% block lead %}
-
-{% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background-color: #F0F6FC;
+}
+</style>
+<h1>The Democrats</h1>
 {% for d in dems %}
-	<p><a href="/candidates/{{d.id}}">{{ d.name }}</a></p>
+	<p class="lead"><a href="/candidates/{{d.id}}">{{ d.name }}</a></p>
 {% endfor %}
 {% endblock %}

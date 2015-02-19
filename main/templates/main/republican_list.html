@@ -3,16 +3,15 @@
 {% block title %}
 	
 {% endblock %}
-{% block header1 %}
-	
-{% endblock %}
-
-{% block lead %}
-
-{% endblock %}
 
 {% block content %}
+<style>
+    body {
+        background-color: #FFF2F2;
+}
+</style>
+<h1>The Grand Old Party</h1>
 {% for r in reps %}
-	<p><a href="/candidates/{{r.id}}">{{ r.name }}</a></p>
+	<p class="lead"><a href="/candidates/{{r.id}}">{{ r.name }}</a></p>
 {% endfor %}
 {% endblock %}
