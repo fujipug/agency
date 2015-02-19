@@ -1,52 +1,18 @@
 <!DOCTYPE html>
-<head>
-	<meta charset="utf-8">
-	<title>{% block title %}default title{% endblock %}</title>
-	{% load staticfiles %}
-	<!-- Bootstrap -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	
-</head>
+{% load staticfiles %}
+{% include 'main/header.html' %}
 <body>
 
-	<!-- header/navbar -->
-	<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Home</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="nav-content">
-        <ul class="nav navbar-nav">
-          <li><a href="/about">About</a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Parties<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="/democrat_list">Democrats</a></li>
-              <li><a href="/republican_list">Republicans</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="navbar-form navbar-right">
-          <img src="{% static 'main/agency.png' %}">
-        </div>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
   <!-- main content -->
   <div class="container">
    <h2>Vote For {{c.name}} </h2>
    <br/>
    <div class="row">
       <div class="col-md-4">
-        <img src="{{ c.picture }}" height="500" width="300">
+        <img src="{%static c.picture %}" height="500" width="300">
       </div>
       <div class="col-md-8">
-        <p> {{c.description}}</p>  
+        <p class="lead"> {{c.description}}</p>  
       </div> 
    </div>
    <br/>
@@ -57,19 +23,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static 'main/tshirt.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="{% static 'tshirt.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>T-Shirt</h2>
 
           <p><a class="btn btn-default" href="/free_stuff_form" role="button">Get Gift &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static 'main/sticker.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="{% static 'sticker.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Bumper Sticker</h2>
 
           <p><a class="btn btn-default" href="/free_stuff_form" role="button">Get Gift &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static 'main/keychain.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="{% static 'keychain.jpg' %}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Keychain</h2>
 
           <p><a class="btn btn-default" href="/free_stuff_form" role="button">get Gift &raquo;</a></p>
@@ -77,14 +43,7 @@
    </div><!-- /.row -->    
   
  </div>
-
- <!-- footer -->
-
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
- <!-- Latest compiled and minified JavaScript -->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-
 </body>
+{% include 'main/footer.html' %}
+{% include 'main/js.html' %}
 </html>
