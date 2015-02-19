@@ -1,43 +1,7 @@
 <!DOCTYPE html>
-<head>
-	<meta charset="utf-8">
-	<title>{% block title %}default title{% endblock %}</title>
-	{% load staticfiles %}
-  <link rel="stylesheet" href="{% static 'main/home.css' %}">
-	<!-- Bootstrap -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	
-</head>
+{% load staticfiles %}
+{% include 'main/header.html' %}
 <body>
-
-	<!-- header/navbar -->
-	<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Home</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="nav-content">
-        <ul class="nav navbar-nav">
-          <li><a href="/about">About</a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Parties<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="/democrat_list">Democrats</a></li>
-              <li><a href="#">Republicans</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="navbar-form navbar-right">
-          <img src="{% static 'main/agency.png' %}">
-        </div>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
   <!-- main content -->
   <div class="container">
    {% block content %}
@@ -45,22 +9,10 @@
    {% endblock %}
  </div>
 
- <!-- footer -->
- <div class="mastfoot">
-  <div class="inner">
-    <p>Follow us on:</p>
-    <a href= "http://twitter.com"><img src="{% static 'main/twitter.png' %}"></a>
-    <a href= "http://facebook.com"><img src="{% static 'main/facebook.png' %}"></a>
-    <a href= "http://google.com"><img src="{% static 'main/google.png' %}"></a>
-    <a href = "https://github.com/lf237/agency"><img src="{% static 'main/github.png' %}"></a>
-  </div>
-</div>
-
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
- <!-- Latest compiled and minified JavaScript -->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+ 
 
 
 </body>
+{% include 'main/footer.html' %}
+{% include 'main/js.html' %}
 </html>
