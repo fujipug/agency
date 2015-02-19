@@ -1,2 +1,4 @@
+Django version 1.7.4
+
 pip install django-bootstrapform
 pip install django-localflavor
