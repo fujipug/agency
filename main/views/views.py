@@ -29,10 +29,3 @@ def free_stuff_form(request):
     #When making changes to class 
     #!.) python manage.py makemigrations main
     #2.) python manage.py migrate
-def Candidates(request, candidate_id):
-    candidate = Candidate.objects.get(id=candidate_id)
-    context = {'c': candidate}
-    return render(request, 'main/candidates_base.html', context)
-   # template = get_template('main/candidates_base.html')
-   # html = template.render(Context({'c' : candidate}))
-   # return HttpResponse(html)
