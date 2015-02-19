@@ -1,5 +1,5 @@
 from django.contrib import admin
-from main.models import Candidate, PostForm
+from main.models import Candidate, FreeStuff
 
 admin.site.register(Candidate)
-admin.site.register(PostForm)
+admin.site.register(FreeStuff)

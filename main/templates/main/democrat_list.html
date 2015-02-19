@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+	
+{% endblock %}
+{% block header1 %}
+	
+{% endblock %}
+
+{% block lead %}
+
+{% endblock %}
+
+{% block content %}
+{% for d in dems %}
+	<p>{{ d.name }}</p>
+{% endfor %}
+{% endblock %}

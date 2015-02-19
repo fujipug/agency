@@ -1,6 +1,6 @@
-from main.models import PostForm
+from main.models import FreeStuff
 from django import forms
  
-class PostFormForm(forms.ModelForm):
+class FreeStuffForm(forms.ModelForm):
     class Meta:
-        model = PostForm
+        model = FreeStuff

@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Please fill out the form below</h2>
+<p>In order to receive your free gift from The Agency, we will need some information to better accomidate the shipping process.</p>
+<br/>
+<form action= 'confirmation.html' method='post'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Submit' />
+</form>
+
+{% endblock %}

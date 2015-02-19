@@ -1,16 +1,18 @@
 from django.db import models
 
-class PostForm(models.Model):
+class FreeStuff(models.Model):
+    FREE_CHOICES=[('T-shirt','T-shirt'),('Sticker','Sticker'),('Keychain','Keychain')]
     name = models.CharField(max_length=256, default="")
     email = models.CharField(max_length=256, default="")
     address = models.CharField(max_length=256, default="")
     state = models.CharField(max_length=2, default="")
     zipcode = models.CharField(max_length=6, default="")
+    gift = models.CharField(max_length=10, choices=FREE_CHOICES, default='T-shirt')
     def __unicode__(self):
         return self.name
 
-    #When making changes to class PostForm
-    #!.) python manage.py makemigrations making
+    #When making changes to class 
+    #!.) python manage.py makemigrations main
 	#2.) python manage.py migrate
 
 class Candidate(models.Model):
