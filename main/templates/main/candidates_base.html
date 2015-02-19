@@ -5,7 +5,11 @@
 
   <!-- main content -->
   <div class="container">
-   <h2>Vote For {{c.name}} </h2>
+   <h2>Vote For 
+       {% if c.party == "Democrat" %}<span style="color:blue">
+       {% else %}<span style="color:red">
+       {% endif %}
+       {{c.name}}</span></h2>
    <br/>
    <div class="row">
       <div class="col-md-4">
