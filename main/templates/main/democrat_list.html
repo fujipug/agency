@@ -14,4 +14,6 @@
 {% for d in dems %}
 	<p class="lead"><a href="/candidates/{{d.id}}">{{ d.name }}</a></p>
 {% endfor %}
+{% load staticfiles %}
+<img class="img-responsive" src="{% static 'donkey.png' %}">
 {% endblock %}
