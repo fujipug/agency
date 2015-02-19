@@ -13,6 +13,6 @@
 
 {% block content %}
 {% for d in dems %}
-	<p>{{ d.name }}</p>
+	<p><a href="/candidates/{{d.id}}">{{ d.name }}</a></p>
 {% endfor %}
 {% endblock %}
