@@ -1,11 +1,14 @@
 from django.db import models
+from us_states import STATE_CHOICES
+from localflavor.us.models import USStateField
+
 
 class FreeStuff(models.Model):
     FREE_CHOICES=[('T-shirt','T-shirt'),('Sticker','Sticker'),('Keychain','Keychain')]
     name = models.CharField(max_length=256, default="")
     email = models.CharField(max_length=256, default="")
     address = models.CharField(max_length=256, default="")
-    state = models.CharField(max_length=2, default="")
+    state = models.USStateField(attrs=None)
     zipcode = models.CharField(max_length=6, default="")
     gift = models.CharField(max_length=10, choices=FREE_CHOICES, default='T-shirt')
     def __unicode__(self):
