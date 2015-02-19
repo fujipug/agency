@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+	
+{% endblock %}
+{% block header1 %}
+	
+{% endblock %}
+
+{% block lead %}
+
+{% endblock %}
+
+{% block content %}
+{% for r in reps %}
+	<p><a href="/candidates/{{r.id}}">{{ r.name }}</a></p>
+{% endfor %}
+{% endblock %}

@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^free_stuff_form/', 'main.views.views.free_stuff_form', name='free_stuff_form'),
     url(r'^candidates/(?P<candidate_id>\d+)/$','main.views.views.Candidates'),
     url(r'^confirmation/', 'main.views.confirmation.index', name='Confirmation'),
-    url(r'^democrat_list/', 'main.views.democrat_list.democrat_list', name='Confirmation'),
-
+    url(r'^democrat_list/', 'main.views.democrat_list.democrat_list', name='Democrats'),
+    url(r'^republican_list/', 'main.views.republican_list.republican_list', name='Republicans'),
     url(r'^aboutcandidates/(?P<candidate_id>\d+)/$','main.views.views.Candidates'),
 )
