@@ -11,9 +11,18 @@
 }
 </style>
 <h1>The Democrats</h1>
-{% for d in dems %}
-	<p class="lead"><a href="/candidates/{{d.id}}">{{ d.name }}</a></p>
-{% endfor %}
+<div class="row"> 
+    <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
+        {% for d in dems %}
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+	        <p class="lead"><a href="/candidates/{{d.id}}">{{ d.name }}</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% load staticfiles %}
-<img class="img-responsive" src="{% static 'donkey.png' %}">
+<div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1">
+    <img class="img-responsive" src="{% static 'donkey.png' %}">
+</div>
 {% endblock %}
