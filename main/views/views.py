@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from main.forms import FreeStuffForm
+from main.forms import FreeStuffForm, CandidateForm
 from django.http import HttpResponseRedirect
 from django.template.loader import get_template
 from django.http import HttpResponse
@@ -27,6 +27,22 @@ def free_stuff_form(request):
             return HttpResponseRedirect('/confirmation/')#HttpResponseRedirect(reverse('free_stuff_form')), kwargs={'post_id': post.id}))
  
     return render(request, 'main/free_stuff_form.html', {
+        'form': form, })
+
+def candidate_form(request):
+    if request.method == 'GET':
+        form = CandidateForm()
+    else:
+        # A POST request: Handle Form Upload
+        form = CandidateForm(request.POST) # Bind data from request.POST 
+ 
+        # If data is valid, proceeds to create a new post and redirect the user
+        if form.is_valid():
+            #post = FreeStuff.objects.create(name=name, email=email, address=address, state=state, zipcode=zipcode, gift=gift)
+            form.save()
+            return HttpResponseRedirect('https://www.paypal.com/')#HttpResponseRedirect(reverse('free_stuff_form')), kwargs={'post_id': post.id}))
+ 
+    return render(request, 'main/candidate_form.html', {
         'form': form, })
 
 

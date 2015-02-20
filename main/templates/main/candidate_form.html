@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% load bootstrap %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<h2>Please fill out the form below</h2>
+
+<br/>
+<form action= '/candidate_form/' role="form" method='post'>{% csrf_token %}
+	{{ form|bootstrap }}
+	<input type='submit' value='Submit' />
+</form>
+
+{% endblock %}
