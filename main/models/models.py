@@ -20,7 +20,7 @@ class FreeStuff(models.Model):
 class Candidate(models.Model):
     name=models.CharField(max_length=100, default="")
     party=models.CharField(max_length=10, default="")
-    description=models.TextField(default="Description missing.")
+    description=models.TextField(default="Description here")
     picture=models.CharField(max_length=100, default="")
     def __unicode__(self):
         return self.name
