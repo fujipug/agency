@@ -18,10 +18,10 @@ class FreeStuff(models.Model):
 	#2.) python manage.py migrate
 
 class Candidate(models.Model):
-    name=models.TextField(default="")
+    name=models.CharField(max_length=100, default="")
     party=models.CharField(max_length=10, default="")
     description=models.TextField(default="Description missing.")
-    picture=models.TextField(default="")
+    picture=models.CharField(max_length=100, default="")
     def __unicode__(self):
         return self.name
 
