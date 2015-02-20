@@ -9,7 +9,7 @@ class FreeStuff(models.Model):
     address = models.CharField(max_length=256, default="")
     state = USStateField(choices = STATE_CHOICES)
     zipcode = USZipCodeField(max_length=None)
-    gift = models.CharField(max_length=10, choices=FREE_CHOICES, default='T-shirt')
+    gift = models.CharField(max_length=10, choices=FREE_CHOICES)
     def __unicode__(self):
         return self.name
 
